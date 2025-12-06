@@ -12,7 +12,6 @@
   "dependencies": {
     "@react-google-maps/api": "^2.20.7",
     "bootstrap": "^5.3.8",
-    "google-maps-react": "^2.0.6",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.556.0",
     "react": "^19.2.0",
