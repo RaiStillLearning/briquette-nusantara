@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import AppNavbar from "./navigation";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   const location = useLocation();
@@ -25,6 +26,7 @@ export default function Layout({ children }) {
     <>
       <AppNavbar />
       <main>{children}</main>
+      <Footer />
     </>
   );
 }
