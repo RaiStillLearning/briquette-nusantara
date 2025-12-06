@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { Phone, Mail, Instagram, Music, MapPin } from "lucide-react";
+import { Phone, Mail, Instagram, MapPin } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 const containerStyle = {
@@ -25,18 +26,15 @@ export default function Footer() {
       }}
     >
       <Container>
-        {/* -------------- TOP SECTION -------------- */}
         <Row className="align-items-start mb-4">
-          {/* GOOGLE MAP + LOGO */}
+          {/* LOGO + MAP */}
           <Col md={4} className="text-center text-md-start mb-4 mb-md-0">
-            {/* LOGO */}
             <img
               src="/logo/briquette-logo.png"
               alt="Logo"
               style={{ height: "120px", marginBottom: "15px" }}
             />
 
-            {/* MAP */}
             <LoadScript googleMapsApiKey="AIzaSyDmW2q9WTmBAM9sCEDdEMju0PPNe0CH0Bg">
               <GoogleMap
                 mapContainerStyle={containerStyle}
@@ -46,11 +44,12 @@ export default function Footer() {
             </LoadScript>
           </Col>
 
-          {/* QUICK LINKS */}
+          {/* QUICK LINKS (mengikuti Navbar) */}
           <Col md={4} className="mb-4 mb-md-0">
             <h6 style={{ fontWeight: "600", marginBottom: "15px" }}>
               quick link
             </h6>
+
             <ul
               style={{
                 listStyle: "none",
@@ -59,10 +58,68 @@ export default function Footer() {
                 lineHeight: "28px",
               }}
             >
-              <li>home</li>
-              <li>product</li>
-              <li>about us</li>
-              <li>contact us</li>
+              <li>
+                <Link to="/" style={{ color: "black", textDecoration: "none" }}>
+                  Home
+                </Link>
+              </li>
+
+              <li style={{ marginTop: "10px", fontWeight: "600" }}>About Us</li>
+              <ul style={{ listStyle: "none", paddingLeft: "15px" }}>
+                <li>
+                  <Link
+                    to="/landing/about/visi-misi#about"
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    About Company
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/landing/about/visi-misi#visimisi"
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    Vision & Mission
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/landing/about/visi-misi#ourteam"
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/landing/about/visi-misi#contact"
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+
+              <li style={{ marginTop: "10px", fontWeight: "600" }}>Product</li>
+              <ul style={{ listStyle: "none", paddingLeft: "15px" }}>
+                <li>
+                  <Link
+                    to="/landing/product/Superiority#superiority"
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    Superiority
+                  </Link>
+                </li>
+              </ul>
+
+              <li style={{ marginTop: "10px" }}>
+                <Link
+                  to="/cooperation#partner"
+                  style={{ color: "black", textDecoration: "none" }}
+                >
+                  Cooperation
+                </Link>
+              </li>
             </ul>
           </Col>
 
@@ -84,7 +141,7 @@ export default function Footer() {
 
             <p style={{ marginTop: "5px" }}>
               <MapPin size={18} color="red" style={{ marginRight: "10px" }} />
-              Jl. HR Rasuna Said Kav 2-1 Blok X-1
+              Jl. HR Rasuna Said Kav 2-1
               <br />
               Kuningan Timur Setiabudi Jakarta
               <br />
@@ -102,10 +159,8 @@ export default function Footer() {
           </Col>
         </Row>
 
-        {/* -------------- BOTTOM LINE -------------- */}
         <hr />
 
-        {/* COPYRIGHT */}
         <div className="text-center">
           <p style={{ color: "#777", fontSize: "14px", margin: 0 }}>
             © 2025 BriquetteNusantara. All rights reserved.
