@@ -11,29 +11,12 @@ const Home = () => {
   return (
     <Layout>
       {/* SEO */}
-      <Helmet>
-        <title>Briquette Nusantara – Sustainable Briquette Manufacturer</title>
-        <meta
-          name="description"
-          content="Briquette Nusantara adalah produsen briket kelapa berkualitas ekspor yang ramah lingkungan. Menghadirkan solusi energi bersih untuk kebutuhan internasional."
-        />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="Briquette Nusantara" />
-        <meta
-          property="og:description"
-          content="Produsen briket kelapa ramah lingkungan berkualitas ekspor."
-        />
-        <meta property="og:image" content="/logo/briquette-logo.png" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://briquette-nusantara.vercel.app"
-        />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+      <SEO
+        title="Briquette Nusantara – Sustainable Briquette Manufacturer"
+        description="Briquette Nusantara adalah produsen briket kelapa berkualitas ekspor yang ramah lingkungan. Menghadirkan solusi energi bersih untuk kebutuhan internasional."
+        image="/logo/briquette-logo.png"
+        url="https://briquette-nusantara.vercel.app/"
+      />
 
       {/* Landing Section */}
       <section
