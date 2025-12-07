@@ -1,17 +1,10 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html", "statusCode": 200 }
-  ],
-  "headers": [
+  "redirects": [
     {
       "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
+      "destination": "/index.html",
+      "statusCode": 200
     }
   ]
 }
